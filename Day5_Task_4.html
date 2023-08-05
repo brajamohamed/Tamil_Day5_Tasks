@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let basePrice = 20;
+      let costPerKm = 12;
+
+      class uberPassanger {
+        constructor(passanger, distance) {
+          this.name = passanger;
+          this.distance = distance;
+          this.rate = basePrice + distance * costPerKm;
+        }
+      }
+      let passangers = [
+        new uberPassanger("Raja", 7),
+        new uberPassanger("Aira", 3.5),
+      ];
+
+      for (let i = 0; i < passangers.length; i++) {
+        let passanger = passangers[i];
+        console.log(
+          `Hello ${passanger.name}, please pay Rs.${passanger.rate}/- only`
+        );
+      }
+    </script>
+  </body>
+</html>

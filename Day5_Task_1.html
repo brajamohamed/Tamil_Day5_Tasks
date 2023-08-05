@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Movie {
+        constructor(title, studio, rating = "PG") {
+          this.title = title;
+          this.studio = studio;
+          this.rating = rating;
+        }
+        
+        static getPG(movies) {
+          let result = movies.filter((a) => a.rating == "PG");
+          return result;
+        }
+      }
+
+      let movies = [
+        new Movie("Casino Royale", "Eon Productions", "PG13"),
+        new Movie("MaManithan", "Sun Pictures", "PG"),
+        new Movie("Asuran", "Sun Pictures", "A"),
+        new Movie("Jackie Chan Adventures", "China", "PG"),
+        new Movie("Spider Man", "WB", "PG"),
+      ];
+      console.log(Movie.getPG(movies));
+    </script>
+  </body>
+</html>
